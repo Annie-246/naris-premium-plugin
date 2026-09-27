@@ -1,0 +1,41 @@
+{
+  "name": "naris-premium",
+  "version": "1.0.0",
+  "description": "Create Naris Premium social posts in Daily and campaign modes with bundled brand guidelines, logos, and campaign assets.",
+  "author": {
+    "name": "Naris Premium"
+  },
+  "homepage": "https://github.com/Annie-246/naris-premium-plugin",
+  "repository": "https://github.com/Annie-246/naris-premium-plugin",
+  "keywords": [
+    "naris",
+    "social-design",
+    "brand-guidelines",
+    "hoa-hau-viet-nam"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Naris Premium Social Visuals",
+    "shortDescription": "T\u1ea1o social post Daily v\u00e0 Campaign Naris Premium.",
+    "longDescription": "M\u1ed9t g\u00f3i ho\u00e0n ch\u1ec9nh \u0111\u1ec3 t\u1ea1o social post Naris Premium: router Daily/Campaign, guideline th\u01b0\u01a1ng hi\u1ec7u g\u1ed1c, logo, asset v\u00e0 sub-skill Hoa H\u1eadu Vi\u1ec7t Nam 2026.",
+    "developerName": "Naris Premium",
+    "category": "Design",
+    "capabilities": [
+      "Image generation",
+      "Brand-guided workflows"
+    ],
+    "defaultPrompt": [
+      "T\u1ea1o m\u1ed9t social post Naris Premium.",
+      "T\u1ea1o \u1ea3nh Daily t\u1eeb s\u1ea3n ph\u1ea9m v\u00e0 n\u1ed9i dung c\u1ee7a t\u00f4i.",
+      "T\u1ea1o \u1ea3nh Campaign Hoa H\u1eadu Vi\u1ec7t Nam."
+    ],
+    "brandColor": "#51362B",
+    "composerIcon": "./assets/naris-logo-black.png",
+    "logo": "./assets/naris-logo-black.png",
+    "logoDark": "./assets/naris-logo-white.png",
+    "screenshots": [
+      "./assets/daily-example.png",
+      "./assets/hhvn-example.png"
+    ]
+  }
+}

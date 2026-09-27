@@ -1,0 +1,7 @@
+interface:
+  display_name: "Naris Premium Social Visuals"
+  short_description: "Router ảnh Daily và Campaign của Naris Premium"
+  icon_small: "./assets/naris-social-logo-black.png"
+  icon_large: "./assets/naris-social-logo-black.png"
+  brand_color: "#51362B"
+  default_prompt: "Use $naris-premium-social-visuals to first ask whether this is a Daily or Campaign post, then route and create it from my product image, copy, references, and requested ratio."

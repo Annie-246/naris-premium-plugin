@@ -1,0 +1,20 @@
+{
+  "name": "naris-premium-marketplace",
+  "interface": {
+    "displayName": "Naris Premium"
+  },
+  "plugins": [
+    {
+      "name": "naris-premium",
+      "source": {
+        "source": "local",
+        "path": "./plugins/naris-premium"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

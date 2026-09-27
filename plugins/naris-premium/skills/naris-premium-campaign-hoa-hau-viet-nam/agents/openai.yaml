@@ -1,0 +1,7 @@
+interface:
+  display_name: "Naris Premium • Hoa Hậu Việt Nam"
+  short_description: "Visual chiến dịch Hoa Hậu Việt Nam của Naris"
+  icon_small: "./assets/hhvn-logo-2026-pink.png"
+  icon_large: "./assets/hhvn-logo-2026-pink.png"
+  brand_color: "#F05C74"
+  default_prompt: "Use $naris-premium-campaign-hoa-hau-viet-nam to create a Naris Premium Hoa Hậu Việt Nam campaign social post from my product, copy, person image if needed, references, and ratio."
