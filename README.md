@@ -18,9 +18,17 @@ Khởi động lại ứng dụng sau khi cài. Trong cuộc trò chuyện mới
 
 ## Dùng trong ChatGPT workspace
 
-Workspace owner hoặc admin có thể import marketplace GitHub này trong phần quản trị Plugins. Khi tính năng upload plugin khả dụng, cũng có thể tải gói ZIP của thư mục `plugins/naris-premium` lên ChatGPT.
+Workspace owner hoặc admin có thể import repository này tại **Workspace settings → Plugins → Add → Import marketplace**. Để nhận các commit mới trên `main`, để trống Branch hoặc nhập `main`. Sau khi một Pull Request được duyệt và merge, admin có thể vào **Marketplaces → Naris Premium → Sync now** để yêu cầu cập nhật ngay; marketplace cũng kiểm tra cập nhật tự động hằng ngày.
 
 Khả năng cài đặt phụ thuộc gói ChatGPT, workspace, quyền của người dùng và bề mặt sản phẩm đang sử dụng.
+
+## Quản lý và cập nhật
+
+Người được cấp quyền GitHub có thể dùng Codex để tạo branch và Pull Request. Nhánh `main` được thiết kế để yêu cầu validation và owner approval trước khi merge. Pull Request chưa merge không làm thay đổi plugin mà mọi người đang dùng.
+
+- Hướng dẫn người chỉnh sửa: [CONTRIBUTING.md](CONTRIBUTING.md)
+- Mô hình quyền và chuyển giao: [GOVERNANCE.md](GOVERNANCE.md)
+- Lịch sử phiên bản: [CHANGELOG.md](CHANGELOG.md)
 
 ## Brief tối thiểu
 
