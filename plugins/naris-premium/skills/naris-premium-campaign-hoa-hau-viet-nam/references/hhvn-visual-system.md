@@ -22,13 +22,13 @@ Keep the surface mostly warm white. Pink and gold are accents, not full-field sa
 
 ### Campaign headline
 
-Use **Editorial New** when available. Otherwise request a high-contrast editorial serif with Didone character: elegant thin hairlines, sharp contrast, classical proportions, and premium fashion-magazine presence. Headline treatment is usually uppercase or title-led, very large, and warm gold with generous line spacing.
+Use the bundled **Editorial New Ultra Light** file for every default campaign headline: `assets/fonts/editorial-new/BHN-Editorial-New-Ultra-Light.otf`. Typeset it deterministically after the art plate has been generated. Do not ask the image model to imitate it or substitute another serif. Headline treatment is usually uppercase or title-led, very large, and warm gold with generous line spacing.
 
 Do not use heavy slab serif, bubbly beauty fonts, ornate script, blackletter, condensed display type, or exaggerated swashes.
 
 ### Supporting copy
 
-Use **Roboto** when available, or a clean neutral modern sans-serif with moderate-to-wide tracking. Supporting copy may be uppercase, smaller, charcoal, and framed by thin horizontal rules. Keep it quiet and precise.
+Use the bundled **Roboto** variable font with moderate-to-wide tracking. Supporting copy may be uppercase, smaller, charcoal, and framed by thin horizontal rules. Keep it quiet and precise.
 
 The skill bundles the approved font assets below. Use the bundled files instead of searching for substitutes when the production workflow supports deterministic typesetting:
 
@@ -37,7 +37,7 @@ The skill bundles the approved font assets below. Use the bundled files instead 
 
 The project owner confirmed permission to package and share the supplied Editorial New files in this Naris Premium plugin. Keep those files scoped to this plugin; do not publish or redistribute them separately.
 
-GPT Image does not reliably consume font files or guarantee exact font rendering. In an image-generation-only workflow, treat the font names as typographic direction. If exact font fidelity is required, disclose that deterministic post-typesetting is needed before changing the production workflow.
+GPT Image must not draw campaign headlines, supporting copy, or logos. Generate a clean art plate and add these elements with deterministic post-typesetting. If the environment cannot run that step, report the limitation instead of returning approximate typography.
 
 The HHVN logo is an image asset. Never recreate its lettering with a font.
 

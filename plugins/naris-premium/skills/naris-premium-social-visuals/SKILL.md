@@ -66,6 +66,14 @@ The bundled source PDF at [references/naris-premium-brand-guideline.pdf](referen
 
 Approved social-logo assets are in `assets/naris-social-logo-black.png` and `assets/naris-social-logo-white.png`. Use the contrast-appropriate file without redrawing, recoloring, stretching, distorting, or prompting the model to recreate it.
 
+## Exact typography requirement
+
+Read [../../references/deterministic-typography.md](../../references/deterministic-typography.md) before producing any post containing promotional copy. The default headline must be typeset with the bundled **Editorial New Ultra Light** file. Use SVN-Aptima only when the user explicitly requests it. Supporting copy uses bundled Roboto.
+
+Do not ask GPT Image to draw the headline, supporting copy, CTA, price, date, disclaimer, Naris logo, or campaign logo. Generate a clean art plate with reserved negative space, then use deterministic compositing with the packaged font and logo assets. Product-label text already present on the supplied packshot remains part of product truth.
+
+If the current environment cannot run a deterministic typesetting/compositing step, stop and state that exact-font delivery is unavailable there. Never substitute AI-drawn text or a visually similar system font without the user's explicit approval.
+
 ## Interpret the inputs
 
 Inspect every supplied image and classify its role internally:
@@ -84,11 +92,12 @@ One image may have more than one role. When ambiguity could cause the wrong prod
 2. Normalize the brief internally: objective, channel, ratio, product, exact copy, CTA, reference roles, must-keep details, optional details, and prohibited details.
 3. When references exist, make a short **keep / translate / discard** map. Preserve only the elements the user explicitly asks to keep. Translate useful visual qualities through the active Daily or Campaign system. Discard reference branding, product identities, watermarks, claims, copy, and unrelated decoration.
 4. Choose one clear concept and hierarchy. The product must be the unmistakable hero; the result should feel art-directed, not like a collage of every reference feature.
-5. Build a production prompt that explicitly states the mode, campaign when applicable, target ratio, product-reference role, exact text, active palette, typography character, logo asset, key-visual elements, layout, lighting, material cues, negative constraints, and all must-preserve details.
-6. Use GPT Image through the image-generation tool to generate or edit the complete bitmap artwork. Attach every relevant product, reference, edit-target, campaign asset, and logo image, and state each attachment's role. Do not use code, HTML/CSS, SVG, Canvas, presentation software, or manual compositing to create or finish the visible artwork.
-7. Inspect the result at full size and thumbnail size. Check product identity, product count, copy accuracy, logo integrity, spacing, contrast, hierarchy, aspect ratio, active-mode brand fit, physical plausibility, and generative defects.
-8. If there is a material defect, make one focused regeneration or edit. Simplify the composition when the image is cluttered. Do not cover errors with post-generation text or logo overlays.
-9. Deliver the best acceptable output inline. State the mode and, for Campaign, the campaign name. State any unresolved limitation plainly.
+5. Build an art-plate prompt that states the mode, campaign when applicable, target ratio, product-reference role, active palette, reserved text/logo zones, key-visual elements, layout, lighting, material cues, negative constraints, and must-preserve details. Explicitly require no promotional text, logos, letter-like marks, badges, or watermarks outside the supplied product packaging.
+6. Use GPT Image to generate or edit the art plate. Attach relevant product, person, reference, edit-target, texture, and decorative assets, but do not ask the model to render required copy or brand/campaign logos.
+7. Inspect the art plate for product fidelity, spacing, hierarchy, aspect ratio, brand fit, physical plausibility, generative defects, and stray pseudo-text. Regenerate once when a material defect would compromise the final composition.
+8. Typeset all required copy with the exact bundled font files and place approved logo assets deterministically. Use `../../scripts/compose_social_post.py` from this skill directory or an equivalent deterministic compositor; never recreate required typography or logos with image generation.
+9. Inspect the final at full size and thumbnail size. Check copy character by character, actual font selection, logo integrity, line breaks, spacing, contrast, hierarchy, and that no generated duplicate text remains beneath the final layers.
+10. Deliver the best acceptable output inline. State the mode and, for Campaign, the campaign name. State any unresolved limitation plainly.
 
 ## Content and claims
 
@@ -97,7 +106,7 @@ One image may have more than one role. When ambiguity could cause the wrong prod
 - Keep copy restrained by default: one headline and one short supporting line unless the brief requires more.
 - Treat wording visible on packaging as packaging detail, not permission to promote it as a claim.
 - Do not invent efficacy, ingredients, clinical results, awards, certifications, testimonials, scarcity, discounts, prices, or medical/skin-lightening claims.
-- If exact copy cannot be rendered correctly, regenerate with a simpler hierarchy or report the limitation. Never silently alter the wording.
+- If exact copy cannot be typeset correctly, revise the deterministic layout or report the limitation. Never silently alter the wording or ask the image model to redraw it.
 
 ## Product, logo, and people fidelity
 
@@ -117,6 +126,8 @@ Do not call the work final unless:
 - The requested aspect ratio is correct as closely as the image tool supports.
 - The exact product remains recognizable and visually primary at thumbnail size.
 - Required copy is present, correct, legible, and hierarchically clear.
+- The headline is rendered from the bundled Editorial New Ultra Light file unless the user explicitly requested an approved bundled alternative; supporting copy is rendered from bundled Roboto.
+- No required promotional copy or brand/campaign logo is AI-drawn.
 - The approved logo is intact, high-contrast, and given appropriate breathing room.
 - Daily work follows the core Naris Premium visual system; Campaign work follows its registered campaign system and approved overrides.
 - Requested reference details are preserved, and irrelevant reference branding or content is absent.
