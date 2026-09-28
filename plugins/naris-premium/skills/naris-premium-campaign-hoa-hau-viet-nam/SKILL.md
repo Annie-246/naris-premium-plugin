@@ -13,6 +13,8 @@ Use this skill only when the user has selected Campaign mode and identifies the 
 
 Before generating or editing, read [references/hhvn-visual-system.md](references/hhvn-visual-system.md) completely. The supplied key visual was used only to derive this system; the original character image is not stored in the skill and must not be treated as a reusable asset.
 
+Also read [../../references/deterministic-typography.md](../../references/deterministic-typography.md). The HHVN headline must be typeset from the bundled Editorial New Ultra Light font after image generation. Supporting copy must use bundled Roboto. Do not use SVN-Aptima unless the user explicitly requests it.
+
 ## Required inputs
 
 Do not generate until these are known:
@@ -39,11 +41,12 @@ Reference images beyond the campaign key visual are optional. If the user asks f
 2. Inspect all supplied images and distinguish product truth, authorized person, style reference, and edit target. Do not infer that a reference person is authorized unless the user provides that image for use.
 3. Build one composition using the campaign visual system. Adapt the KV grammar to the requested ratio rather than copying its exact placements.
 4. Keep the product as the primary commercial focal point unless the user explicitly asks for a person-led announcement. Even then, the product and sponsor relationship must remain legible.
-5. Attach only relevant campaign assets to GPT Image. State each role explicitly: exact product, authorized person, Naris logo, HHVN logo, paper texture, and optional decorative motif.
-6. Generate or edit the complete bitmap with GPT Image. Do not finish it with code, HTML/CSS, SVG, Canvas, presentation software, or manual compositing.
-7. Inspect the result at full size and thumbnail size. Verify the fixed logo order, logo integrity, product identity, person identity when supplied, copy accuracy, ratio, hierarchy, campaign palette, and asset restraint.
-8. If a material defect exists, perform one focused regeneration or edit. Never correct a broken logo or misspelled copy by covering it with a code-rendered overlay.
-9. Deliver the best acceptable output inline and identify it as Campaign: Hoa Hậu Việt Nam.
+5. Attach only relevant visual assets to GPT Image: exact product, authorized person, paper texture, and optional decorative motifs. Reserve a quiet headline area and a top logo row, but do not ask GPT Image to render promotional copy or either logo.
+6. Generate or edit the text-free art plate with GPT Image. Explicitly prohibit promotional text, pseudo-text, Naris/HHVN logos, badges, and watermarks outside the supplied product packaging.
+7. Inspect the art plate for product identity, person identity when supplied, ratio, hierarchy, campaign palette, asset restraint, reserved space, and stray pseudo-text. Perform one focused regeneration when a material defect exists.
+8. Use deterministic compositing to typeset the headline with the bundled Editorial New Ultra Light file, supporting copy with bundled Roboto, and place the exact Naris-left/HHVN-right logo assets. Use `../../scripts/compose_social_post.py` from this skill directory or an equivalent deterministic compositor.
+9. Inspect the final at full size and thumbnail size. Verify exact copy, actual font files, fixed logo order, logo integrity, product identity, line breaks, safe margins, contrast, and absence of generated duplicate text.
+10. Deliver the best acceptable output inline and identify it as Campaign: Hoa Hậu Việt Nam.
 
 ## Asset use
 
@@ -69,5 +72,6 @@ Do not call the post final unless:
 - Any visible person came from an authorized image supplied for the current post and remains recognizable.
 - The product pack, count, color, label, and geometry remain faithful to the supplied product image.
 - Required copy is exact and readable, with no invented claim, award, price, date, or endorsement.
+- The headline is rendered from bundled Editorial New Ultra Light, supporting copy from bundled Roboto, and neither promotional typography nor campaign logos are AI-drawn.
 - The warm textured background, restrained pink botanical language, gold editorial hierarchy, and refined pageant mood are recognizable without becoming crowded.
 - No asset from another Naris campaign has leaked into the image.

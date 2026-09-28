@@ -46,10 +46,11 @@ Ví dụ:
 
 ## Typography
 
-- Daily: Editorial New, SVN-Aptima và Roboto.
-- Campaign Hoa Hậu Việt Nam: Editorial New và Roboto.
+- Headline mặc định cho Daily và Campaign Hoa Hậu Việt Nam: Editorial New Ultra Light được đóng gói trong plugin.
+- Supporting copy: Roboto được đóng gói trong plugin.
+- SVN-Aptima chỉ được dùng khi người dùng yêu cầu rõ.
 
-GPT Image có thể mô phỏng kiểu chữ. Khi cần typography chính xác tuyệt đối, nên dùng Codex hoặc môi trường có khả năng chạy bước typesetting với các font đi kèm.
+GPT Image chỉ tạo art plate không chữ. Codex đặt headline, supporting copy và logo bằng font/asset thật trong bước compositing deterministic. Nếu môi trường hiện tại không chạy được bước này, plugin phải báo giới hạn thay vì để AI vẽ lại font.
 
 ## Nội dung gói
 

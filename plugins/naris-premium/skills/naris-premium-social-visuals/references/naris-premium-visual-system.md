@@ -33,7 +33,8 @@ Build tonal depth within this family. Natural product colors may remain accurate
 
 ## Typography
 
-- Preferred headline faces: **Editorial New** and **SVN-Aptima**.
+- Default headline face: **Editorial New Ultra Light**.
+- **SVN-Aptima** is an approved alternative only when the user explicitly requests it.
 - Supporting/body face: **Roboto**.
 
 The plugin bundles the approved font assets below. Use the bundled files instead of searching for substitutes when the production workflow supports deterministic typesetting:
@@ -44,9 +45,7 @@ The plugin bundles the approved font assets below. Use the bundled files instead
 
 The project owner confirmed permission to package and share the supplied Editorial New and SVN-Aptima files in this Naris Premium plugin. Keep those files scoped to this plugin; do not publish or redistribute them separately.
 
-GPT Image does not reliably consume font files or guarantee exact font rendering. In an image-generation-only workflow, treat these names as typographic direction. If the user requires exact font fidelity, disclose that deterministic post-typesetting is required before changing the production workflow.
-
-When the exact fonts are unavailable to the image model, reproduce their character rather than naming a random substitute: elegant high-contrast editorial serif for premium/emotive lines; refined humanist serif or restrained classic face for secondary display copy; clean neutral sans-serif for supporting information.
+Do not use GPT Image to draw required promotional typography. Generate a clean art plate, then typeset the headline from `BHN-Editorial-New-Ultra-Light.otf` and supporting copy from the bundled Roboto variable font. Do not approximate these fonts visually. If the user explicitly requests SVN-Aptima, use the corresponding bundled file rather than synthesizing the style.
 
 Keep typography sparse, poised, and legible. Use scale, whitespace, and alignment before decorative effects. Avoid bubbly fonts, heavy condensed display faces, tech/sci-fi lettering, loud outlines, thick drop shadows, excessive all-caps, or multiple competing styles.
 
