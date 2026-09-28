@@ -26,8 +26,15 @@ Khả năng cài đặt phụ thuộc gói ChatGPT, workspace, quyền của ng�
 
 Người được cấp quyền GitHub có thể dùng Codex để tạo branch và Pull Request. Nhánh `main` được thiết kế để yêu cầu validation và owner approval trước khi merge. Pull Request chưa merge không làm thay đổi plugin mà mọi người đang dùng.
 
+Quy trình ngắn:
+
+```text
+Maintainer mở PR → validation → Annie/CODEOWNER duyệt
+→ Squash and merge → workspace admin bấm Sync now
+```
+
 - Hướng dẫn người chỉnh sửa: [CONTRIBUTING.md](CONTRIBUTING.md)
-- Mô hình quyền và chuyển giao: [GOVERNANCE.md](GOVERNANCE.md)
+- Cách mời collaborator, phân quyền và chuyển giao: [GOVERNANCE.md](GOVERNANCE.md)
 - Lịch sử phiên bản: [CHANGELOG.md](CHANGELOG.md)
 
 ## Brief tối thiểu
