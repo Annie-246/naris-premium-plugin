@@ -1,0 +1,9 @@
+# Annie is the initial owner and final reviewer for all repository changes.
+* @Annie-246
+
+# Keep distribution and validation changes under explicit owner review.
+/.agents/plugins/marketplace.json @Annie-246
+/plugins/naris-premium/plugin.json @Annie-246
+/plugins/naris-premium/.codex-plugin/plugin.json @Annie-246
+/.github/workflows/ @Annie-246
+
